@@ -1,0 +1,11 @@
+ # Conclusion
+ ## Future extensions
+ The database created during this project is highly extensible and can be easily modified to track any possible football stat by extending the features and design choices in the database as is. For example we can model each defensive action as another shot which results in either a failed challenge, a successfull challenge, a red card or a yellow card. And just like that as with shots we have clearly modeled all possible defensive actions in one table. Again we can extend this to passes and track those. With effort one might be able to even track posession using the shot and passing table and taking the time differences. 
+ We also tried modelling every single possible universal rule and restriction of a football league. And we have it modelled to unfortunately we couldn't implement those in time. For example customs triggers to restrict over allocation of players like the player restriction custom function we already implemented.
+ The scope of our project has exceeded our wildest imaginations. Unfortunately the alloted time was not nearly enough to build on these. All possible extensions would be trivial albeit extremely time consuming.
+ 
+ ## Learnings
+ During this project we have managed to master PostgreSQL and sqlite. We have also deeply internalized the lessons of a good relational database design. We have dipped our toe in containerization and web dev. Although a less restrictive timeline would have been really helpful to truly master the lessons, overall we are confident that we have learned most that the course expects us to.
+
+ ## Final remarks
+Overall we believe that our database follows all principles of good design (except maybe speed in a production software but that can be fixed with materialized views, we didn't do that because our front end tool did not gel well with materialized views). We had every possible behaviour of a football league modeled in our database and have proven that they can be implemented by implementing at least one of each type of restriction. Although the time crunch made this exceptionally hard and incomplete we believe we can defend our database quite well

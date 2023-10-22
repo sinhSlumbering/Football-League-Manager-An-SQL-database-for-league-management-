@@ -1,0 +1,140 @@
+insert into players
+(player_id, name, birthdate, nationality) VALUES
+(1, 'Mohammed Salah', '1992-06-15', 'Egyptian'),
+(2, 'Thiago Alcantara', '1991-04-11', 'Spanish'),
+(3, 'Alisson Becker', '1992-10-2', 'Brazilian'),
+(4, 'Daniel Iversen', '1997-07-19', 'Danish'),
+(5, 'James Maddison', '1996-11-23', 'English'),
+(6, 'Jamie Vardy', '1987-01-11', 'English'),
+(7, 'Jose Sa', '1993-01-17', 'Portuguese'),
+(8, 'Hwang Hee-chan', '1996-01-26', 'South Korean'),
+(9, 'Adama Traore', '1996-01-25', 'Spanish')
+(10, 'Kelechi Promise Iheanacho', '1996-10-03', 'Nigerian');
+
+insert into  referees
+(referee_id, name, nationality) VALUES
+(1, 'Michael Oliver', 'English'),
+(2, 'Stuart Atwell', 'English');
+
+insert into coaches
+(coach_id, name, nationality) VALUES
+(1, 'Jurgen Klopp', 'German'),
+(2, 'Brendan Rodgers', 'Irish'),
+(3, 'Julen Lopetegui', 'Spanish');
+
+insert into stadiums
+(stadium_id, name, address, capacity) VALUES
+(1, 'Anfield', 'Anfield Rd, Anfield, Liverpool L4 0TH, United Kingdom', 53394),
+(2, 'King Power Stadium', 'Filbert Wy, Leicester LE2 7FL, United Kingdom', 32261),
+(3, 'Molineux Stadium', 'Waterloo Rd, Wolverhampton WV1 4QR, United Kingdom', 32050);
+
+insert into teams
+(team_id, name, code, city, address) VALUES
+(1, 'Liverpool FC', 'LIV', 'Liverpool', 'Anfield Rd, Anfield, Liverpool L4 0TH, United Kingdom'),
+(2, 'Leicester City FC', 'LEI', 'Leicester', 'Filbert Wy, Leicester LE2 7FL, United Kingdom'),
+(3, 'Wolverhampton Wanderers FC', 'WOL','Wolverhampton', 'Waterloo Rd, Wolverhampton WV1 4QR, United Kingdom');
+
+insert into leagues
+(league_id, name, country, start_date, end_date) VALUES
+(1, 'Premier League 22/23', 'England', '2022-08-06', '2023-05-28');
+
+insert into positions
+(position_id, position_desc) VALUES
+('GK', 'Goalkeeper'),
+('DF', 'Defender'),
+('MF', 'Midfielder'),
+('FW', 'Forward'),
+('SUB', 'Substitution');
+
+insert into league_teams
+(league_id, team_id) VALUES
+(1, 1), (1, 2), (1,3);
+
+insert into rosters
+(player_id, team_id, league_id, position_id) VALUES
+(1, 1, 1, 'FW'),
+(2, 1, 1, 'MF'),
+(3, 1, 1, 'GK'),
+(4, 2, 1, 'GK'),
+(5, 2, 1, 'MF'),
+(6, 2, 1, 'FW'),
+(7, 3, 1, 'GK'),
+(8, 3, 1, 'FW'),
+(9, 3, 1, 'MF')
+(10, 2, 1, 'FW');
+
+insert into team_coach
+(team_id, coach_id, league_id) VALUES
+(1, 1, 1),
+(2, 2, 1),
+(3, 3, 1);
+
+insert into matches
+(match_id, league_id, team_1, team_2, venue, referee) VALUES
+(1, 1, 1, 2, 1, 1),
+(2, 1, 2, 3, 2, 1),
+(3, 1, 1, 3, 1, 2);
+
+insert into starts
+(match_id, player_id, position_id) VALUES
+(1, 1, 'FW'),
+(1, 2, 'MF'),
+(1, 3, 'GK'),
+(1, 4, 'GK'),
+(1, 5, 'MF'),
+(1, 6, 'FW'),
+(2, 4, 'GK'),
+(2, 5, 'MF'),
+(2, 6, 'FW'),
+(2, 7, 'GK'),
+(2, 8, 'FW'),
+(2, 9, 'MF'),
+(3, 7, 'GK'),
+(3, 8, 'FW'),
+(3, 9, 'MF'),
+(3, 1, 'FW'),
+(3, 2, 'MF'),
+(3, 3, 'GK');
+
+insert into substitutions
+(match_id, player_id, minute, in_out) values
+(2, 5, 78, 'I'),
+(2, 10, 78, 'O');
+
+insert into shot_types
+(shot_type, shot_description) VALUES
+('G', 'Goal'),
+('OG', 'Own Goal'),
+('M', 'Miss'),
+('PG', 'Penalty Goal'),
+('PM', 'Penalty Miss'),
+('PS', 'Penalty Saved'),
+('S', 'Save');
+
+insert into shots
+(shot_id, match_id, minute, shot_taker, assister, shot_result) VALUES
+(1, 1, 38, 5, 5, 'OG'),
+(2, 1, 45, 6, 5, 'M'),
+(3, 1, 60, 6, 5, 'G'),
+(4, 1, 68, 1, 2, 'G'),
+(5, 1, 70, 2, 2, 'S'),
+(6, 1, 72, 1, 2, 'M'),
+(7, 1, 80, 5, 5, 'S'),
+(8, 2, 20, 5, 6, 'M'),
+(9, 2, 30, 7, 8, 'M'),
+(10, 2, 45, 6, 6, 'G'),
+(11, 2, 60, 6, 5, 'M'),
+(12, 2, 70, 5, 6, 'S'),
+(13, 3, 10, 1, 1, 'G'),
+(14, 3, 13, 1, 2, 'M'),
+(15, 3, 25, 9, 8, 'S'),
+(16, 3, 30, 8, 8, 'S'),
+(17, 3, 35, 9, 8, 'S'),
+(18, 3, 45, 1, 2, 'G'),
+(19, 3, 67, 2, 1, 'G');
+
+
+
+
+
+
