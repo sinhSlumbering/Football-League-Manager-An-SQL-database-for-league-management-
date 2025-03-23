@@ -129,7 +129,7 @@ CREATE TABLE matches(
     CONSTRAINT chk_team_1_cannot_equal_team_2 CHECK (team_1<>team_2)
 );
 
--- niggas who play in a match. useful for calculating appearances
+-- players who play in a match. useful for calculating appearances
 CREATE TABLE starts(
     match_id INTEGER,
     player_id INTEGER,
